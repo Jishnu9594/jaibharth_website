@@ -993,6 +993,7 @@ upcoming meetings
 /* General Section Styling */
 /* About Us Section */
 /* Base styling for mobile-first design */
+/* Global Styles for About Us Section */
 .about-us {
   padding: 60px 0;
   background-color: #fff;
@@ -1006,7 +1007,7 @@ upcoming meetings
 }
 
 .about-us .section-heading h2 {
-  font-size: 28px; /* Smaller font for mobile */
+  font-size: 36px;
   color: #222;
   font-weight: bold;
   margin-bottom: 10px;
@@ -1016,13 +1017,13 @@ upcoming meetings
 }
 
 .about-us .section-heading h2 .arrow {
-  font-size: 20px; /* Smaller arrow for mobile */
+  font-size: 24px;
   color: #1abc9c;
   font-weight: bold;
 }
 
 .about-us .section-heading p.section-description {
-  font-size: 14px; /* Smaller font for mobile */
+  font-size: 16px;
   color: #666;
   max-width: 700px;
   margin: 0 auto;
@@ -1032,21 +1033,21 @@ upcoming meetings
 /* About Card Styling */
 .about-us .about-card {
   background-color: #ffffff;
-  padding: 20px; /* Less padding on mobile */
+  padding: 30px;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
 }
 
 .about-us .about-card h3 {
-  font-size: 24px; /* Smaller font for mobile */
+  font-size: 28px;
   color: #1abc9c;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
 .about-us .about-card p {
-  font-size: 14px; /* Smaller font for mobile */
+  font-size: 15px;
   color: #333;
   line-height: 1.6;
 }
@@ -1055,16 +1056,23 @@ upcoming meetings
 .mission-card,
 .vision-card {
   background-color: #ffffff;
-  padding: 15px; /* Less padding on mobile */
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
+  margin-bottom: 30px;
+}
+
+.mission-card:hover,
+.vision-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .mission-card h4,
 .vision-card h4 {
-  font-size: 18px; /* Smaller font for mobile */
+  font-size: 22px;
   color: #1abc9c;
   font-weight: bold;
   margin-bottom: 10px;
@@ -1072,7 +1080,7 @@ upcoming meetings
 
 .mission-card p,
 .vision-card p {
-  font-size: 14px; /* Smaller font for mobile */
+  font-size: 15px;
   color: #555;
   line-height: 1.6;
 }
@@ -1086,11 +1094,16 @@ upcoming meetings
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.college-photo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
 /* Grid Layout and Alignment */
 .row {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Less gap on mobile */
+  gap: 30px;
   justify-content: center;
 }
 
@@ -1102,132 +1115,68 @@ upcoming meetings
   min-width: 280px;
 }
 
-/* Media Queries */
+/* Global Media Queries */
 
-/* Tablets (768px and above) */
-@media (min-width: 768px) {
+/* Medium Devices (Tablets) */
+@media (max-width: 992px) {
   .about-us .section-heading h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
-
-  .about-us .section-heading h2 .arrow {
-    font-size: 22px;
-  }
-
   .about-us .section-heading p.section-description {
     font-size: 15px;
   }
-
-  .about-us .about-card {
-    padding: 25px;
+  .about-us .about-card h3,
+  .mission-card h4,
+  .vision-card h4 {
+    font-size: 24px;
   }
-
-  .about-us .about-card h3 {
-    font-size: 26px;
+  .about-us .about-card p,
+  .mission-card p,
+  .vision-card p {
+    font-size: 14px;
   }
+}
 
-  .about-us .about-card p {
-    font-size: 15px;
+/* Small Devices (Phones) */
+@media (max-width: 768px) {
+  .about-us .section-heading h2 {
+    font-size: 24px;
   }
-
+  .about-us .section-heading p.section-description {
+    font-size: 14px;
+  }
+  .about-us .about-card h3,
   .mission-card h4,
   .vision-card h4 {
     font-size: 20px;
   }
-
+  .about-us .about-card p,
   .mission-card p,
   .vision-card p {
-    font-size: 15px;
-  }
-
-  .row {
-    gap: 25px;
+    font-size: 13px;
   }
 }
 
-/* Desktops (992px and above) */
-@media (min-width: 992px) {
+/* Extra Small Devices (Very Small Phones) */
+@media (max-width: 576px) {
+  .about-us {
+    padding: 40px 15px;
+  }
   .about-us .section-heading h2 {
-    font-size: 36px;
+    font-size: 20px;
   }
-
-  .about-us .section-heading h2 .arrow {
-    font-size: 24px;
-  }
-
   .about-us .section-heading p.section-description {
-    font-size: 16px;
+    font-size: 13px;
   }
-
-  .about-us .about-card {
-    padding: 30px;
-  }
-
-  .about-us .about-card h3 {
-    font-size: 28px;
-  }
-
-  .about-us .about-card p {
-    font-size: 16px;
-  }
-
+  .about-us .about-card h3,
   .mission-card h4,
   .vision-card h4 {
-    font-size: 22px;
-  }
-
-  .mission-card p,
-  .vision-card p {
-    font-size: 16px;
-  }
-
-  .row {
-    gap: 30px;
-  }
-}
-
-/* Large Desktops (1200px and above) */
-@media (min-width: 1200px) {
-  .about-us {
-    padding: 80px 0;
-  }
-
-  .about-us .section-heading h2 {
-    font-size: 40px;
-  }
-
-  .about-us .section-heading h2 .arrow {
-    font-size: 26px;
-  }
-
-  .about-us .section-heading p.section-description {
     font-size: 18px;
   }
-
-  .about-us .about-card {
-    padding: 35px;
-  }
-
-  .about-us .about-card h3 {
-    font-size: 30px;
-  }
-
-  .about-us .about-card p {
-    font-size: 17px;
-  }
-
-  .mission-card h4,
-  .vision-card h4 {
-    font-size: 24px;
-  }
-
+  .about-us .about-card p,
   .mission-card p,
   .vision-card p {
-    font-size: 17px;
-  }
-
-  .row {
-    gap: 35px;
+    font-size: 12px;
   }
 }
 
