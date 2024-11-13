@@ -190,6 +190,46 @@ img {
 global styles
 --------------------------------------------- 
 */
+/* Base styles for mobile-first approach */
+body {
+  font-size: 16px;
+}
+
+/* Large desktops and above */
+@media (min-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  body {
+    font-size: 17px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Large phones */
+@media (min-width: 576px) and (max-width: 767px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+/* Small phones and below */
+@media (max-width: 575px) {
+  body {
+    font-size: 14px;
+  }
+}
+
 html,
 body {
   background: #fff;
