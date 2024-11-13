@@ -1119,7 +1119,7 @@ upcoming meetings
 }
 
 /* Section Responsive Layout */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .about-us .section-heading h2 {
     font-size: 30px;
   }
@@ -1127,7 +1127,7 @@ upcoming meetings
   .vision-card {
     padding: 15px;
   }
-}
+} */
 
 section.upcoming-meetings {
   background-image: url(../images/meetings-bg.jpg);
