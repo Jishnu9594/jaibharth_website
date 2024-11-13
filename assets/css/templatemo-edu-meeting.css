@@ -1754,7 +1754,7 @@ upcoming meetings page
 */
 /* About Banner Section */
 #aboutBanner {
-  background-color: #fff; /* Light background color */
+  background-color: #fff;
   padding: 40px 0;
 }
 
@@ -1762,6 +1762,7 @@ upcoming meetings page
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center; /* Centers content vertically */
 }
 
 .aboutBannerDetails {
@@ -1774,6 +1775,7 @@ upcoming meetings page
   font-size: 24px;
   color: #012b81;
   font-weight: bold;
+  margin-bottom: 5px; /* Space between headings */
 }
 
 .aboutBannerDetails h1 {
@@ -1781,6 +1783,7 @@ upcoming meetings page
   color: #333;
   font-weight: 600;
   margin-top: 10px;
+  line-height: 1.2; /* Tighter line height for better readability */
 }
 
 .aboutBannerDetails p {
@@ -1806,20 +1809,21 @@ upcoming meetings page
   font-size: 24px;
   color: #012b81;
   margin-right: 15px;
-  display: none; /* Hide the icon */
+  display: none; /* Keep icon hidden */
 }
 
 .aboutBannerDetails ul li h3 {
   font-size: 18px;
   color: #333;
   margin: 0;
+  line-height: 1.4;
 }
 
 /* Custom Bullet with Icon */
 .aboutBannerDetails ul li:before {
-  content: "\2022"; /* Unicode for bullet point */
+  content: "\2022"; /* Bullet point */
   font-size: 24px;
-  color: #012b81; /* Bullet color */
+  color: #012b81;
   margin-right: 10px;
   display: inline-block;
   width: 30px;
@@ -1829,6 +1833,7 @@ upcoming meetings page
   flex: 1;
   max-width: 40%;
   padding-left: 30px;
+  text-align: center; /* Centers image on smaller screens */
 }
 
 .aboutBannerThumbnail img {
@@ -1843,12 +1848,13 @@ upcoming meetings page
 @media (max-width: 768px) {
   .aboutBannerMain {
     flex-direction: column;
+    align-items: center;
   }
 
   .aboutBannerDetails {
     max-width: 100%;
     padding-right: 0;
-    text-align: center; /* Center text on smaller screens */
+    text-align: center;
   }
 
   .aboutBannerDetails h1 {
@@ -1861,6 +1867,7 @@ upcoming meetings page
 
   .aboutBannerDetails p {
     font-size: 15px;
+    line-height: 1.5;
   }
 
   .aboutBannerDetails ul li h3 {
@@ -1890,6 +1897,7 @@ upcoming meetings page
 
   .aboutBannerDetails p {
     font-size: 14px;
+    line-height: 1.4;
   }
 
   .aboutBannerDetails ul li h3 {
