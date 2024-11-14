@@ -762,8 +762,9 @@ upcoming meetings
 /* About Us Section */
 /* Base styling for mobile-first design */
 /* Global Styles for About Us Section */
+/* About Us Section Styling */
 .about-us {
-  padding: 60px 0;
+  padding: 80px 0;
   background-color: #fff;
   font-family: Arial, sans-serif;
 }
@@ -771,100 +772,105 @@ upcoming meetings
 /* Section Heading */
 .about-us .section-heading {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .about-us .section-heading h2 {
-  font-size: 36px;
-  color: #222;
+  font-size: 40px;
+  color: #333;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   position: relative;
   display: inline-block;
-  padding-bottom: 8px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #4a90e2;
 }
 
 .about-us .section-heading h2 .arrow {
   font-size: 24px;
-  color: #1abc9c;
-  font-weight: bold;
+  color: #4a90e2;
 }
 
 .about-us .section-heading p.section-description {
-  font-size: 16px;
-  color: #666;
-  max-width: 700px;
+  font-size: 18px;
+  color: #444;
+  max-width: 750px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 /* About Card Styling */
 .about-us .about-card {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
+  background-color: #fff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-us .about-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .about-us .about-card h3 {
-  font-size: 28px;
-  color: #1abc9c;
+  font-size: 30px;
+  color: #4a90e2;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .about-us .about-card p {
-  font-size: 15px;
-  color: #333;
-  line-height: 1.6;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
 }
 
 /* Mission and Vision Cards */
 .mission-card,
 .vision-card {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .mission-card:hover,
 .vision-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .mission-card h4,
 .vision-card h4 {
-  font-size: 22px;
-  color: #1abc9c;
+  font-size: 24px;
+  color: #4a90e2;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .mission-card p,
 .vision-card p {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.6;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
 }
 
 /* College Photos Styling */
 .college-photo img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .college-photo img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transform: scale(1.08);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
 }
 
 /* Grid Layout and Alignment */
@@ -888,6 +894,26 @@ upcoming meetings
 /* Medium Devices (Tablets) */
 @media (max-width: 992px) {
   .about-us .section-heading h2 {
+    font-size: 32px;
+  }
+  .about-us .section-heading p.section-description {
+    font-size: 16px;
+  }
+  .about-us .about-card h3,
+  .mission-card h4,
+  .vision-card h4 {
+    font-size: 26px;
+  }
+  .about-us .about-card p,
+  .mission-card p,
+  .vision-card p {
+    font-size: 15px;
+  }
+}
+
+/* Small Devices (Phones) */
+@media (max-width: 768px) {
+  .about-us .section-heading h2 {
     font-size: 28px;
   }
   .about-us .section-heading p.section-description {
@@ -896,55 +922,35 @@ upcoming meetings
   .about-us .about-card h3,
   .mission-card h4,
   .vision-card h4 {
-    font-size: 24px;
+    font-size: 22px;
   }
   .about-us .about-card p,
   .mission-card p,
   .vision-card p {
     font-size: 14px;
-  }
-}
-
-/* Small Devices (Phones) */
-@media (max-width: 768px) {
-  .about-us .section-heading h2 {
-    font-size: 24px;
-  }
-  .about-us .section-heading p.section-description {
-    font-size: 14px;
-  }
-  .about-us .about-card h3,
-  .mission-card h4,
-  .vision-card h4 {
-    font-size: 20px;
-  }
-  .about-us .about-card p,
-  .mission-card p,
-  .vision-card p {
-    font-size: 13px;
   }
 }
 
 /* Extra Small Devices (Very Small Phones) */
 @media (max-width: 576px) {
   .about-us {
-    padding: 40px 15px;
+    padding: 50px 15px;
   }
   .about-us .section-heading h2 {
-    font-size: 20px;
+    font-size: 24px;
   }
   .about-us .section-heading p.section-description {
-    font-size: 13px;
+    font-size: 14px;
   }
   .about-us .about-card h3,
   .mission-card h4,
   .vision-card h4 {
-    font-size: 18px;
+    font-size: 20px;
   }
   .about-us .about-card p,
   .mission-card p,
   .vision-card p {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
@@ -1092,81 +1098,112 @@ apply now
 ---------------------------------------------
 */
 
-section.apply-now {
+/* Section Styling */
+/* Section Styling */
+#programs {
+  padding: 60px 20px;
   background-color: #fff;
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 140px 0px;
+  color: #333;
 }
 
-section.apply-now .item {
-  background-color: rgba(250, 250, 250, 0.15);
-  padding: 40px;
-  margin-bottom: 30px;
+#programs .container {
+  max-width: 1200px;
+  margin: auto;
 }
 
-section.apply-now .item h3 {
-  color: black;
-  text-transform: uppercase;
+.programsMain h2 {
+  color: #1e1e1e;
   font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
 }
 
-section.apply-now .item p {
+.programsMain h1 {
   color: black;
-  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 20px 0 40px;
+  text-align: center;
 }
 
-.accordions {
-  border-radius: 20px;
-  padding: 40px;
+/* Card Layout */
+.programsCardList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.programCard {
   background-color: #fff;
-  margin-left: 45px;
-}
-.accordions .accordion {
-  border-bottom: 1px solid #eee;
-}
-.accordions .last-accordion {
-  border-bottom: none;
-}
-.accordion-head {
-  padding: 20px;
-  font-size: 18px;
-  font-weight: 700;
-  color: #1f272b;
-  cursor: pointer;
-  transition: color 200ms ease-in-out;
-  border-bottom: 1px solid #fff;
-}
-@media screen and (min-width: 768px) {
-  .accordion-head {
-    padding: 1rem;
-    font-size: 1.2rem;
-  }
-}
-.accordion-head .icon {
-  float: right;
-  transition: transform 200ms ease-in-out;
-}
-.accordion-head.is-open {
-  color: #f5a425;
-  border-bottom: none;
-}
-.accordion-head.is-open .icon {
-  transform: rotate(45deg);
-}
-.accordion-body {
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  height: 0;
-  transition: height 300ms ease-in-out;
-  border-bottom: 1px solid #fff;
+  width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
 }
-.accordion-body > .content {
+
+.programCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Image */
+.programCardImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Card Content */
+.programCardContent {
   padding: 20px;
-  padding-top: 0;
+}
+
+.programCardContent h3 {
+  font-size: 20px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.programCardContent p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+/* Apply Now Button Wrapper */
+.applyNowButtonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Apply Now Button Styling */
+.applyNowButton {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover Effect for Button */
+.applyNowButton:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+  .programsCardList {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* 
