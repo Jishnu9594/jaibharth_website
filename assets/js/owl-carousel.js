@@ -3886,3 +3886,11 @@ $(document).ready(function () {
     },
   });
 });
+// JavaScript to handle automatic sliding of cards
+const slider = document.querySelector(".card-slider");
+
+// Set the sliding interval (for automatic sliding)
+setInterval(() => {
+  const firstCard = slider.querySelector(".card");
+  slider.appendChild(firstCard); // Move the first card to the end
+}, 5000); // Change slide every 5 seconds

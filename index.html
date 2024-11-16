@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="assets/css/lightbox.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
 <!--
 
 TemplateMo 569 Edu Meeting
@@ -64,21 +66,39 @@ https://templatemo.com/tm-569-edu-meeting
                 <nav class="main-nav">
                     <!-- Logo Start -->
                     <a href="#top" class="logo">
-                        <img src="assets/images/jaibharath-removebg-preview (1).png" alt="Jai Bharath Logo">
+                        <img src="assets/images/jai_bharath_new.jpeg" alt="Jai Bharath Logo">
                     </a>
                     <!-- Logo End -->
 
                     <!-- Menu Start -->
                     <ul class="nav">
                         <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                        <li><a href="meetings.html">About Us</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
+                        <li class="has-sub">
+                          <a href="javascript:void(0)">About Us</a>
+                          <ul class="sub-menu">
+                              <li><a href="aboutus.html">About Group</a></li>
+                              <li><a href="aboutcollege.html">About College</a></li>
+                              <li><a href="gallery.html">Gallery</a></li>
+                              
+                          </ul>
+                      </li>
+                      <li class="has-sub">
+                        <a href="javascript:void(0)">Placements</a>
+                        <ul class="sub-menu">
+                            <li><a href="aboutus.html">Career Enhancement Program</a></li>
+                            <li><a href="meetings.html">Job Fair</a></li>
+                            <li><a href="meetings.html">Placement Report</a></li>
+                            <li><a href="meetings.html">Our Recruiters</a></li>
+                            
+                        </ul>
+                    </li>
+                        <li><a href="gallery.html">Facilities</a></li>
                         <li class="scroll-to-section"><a href="#apply">Apply Now</a></li>
                         <li class="has-sub">
-                            <a href="javascript:void(0)">Pages</a>
+                            <a href="javascript:void(0)">Activites</a>
                             <ul class="sub-menu">
-                                <li><a href="meetings.html">Upcoming Meetings</a></li>
-                                <li><a href="meeting-details.html">Meeting Details</a></li>
+                                <li><a href="meetings.html">Cultural Activities</a></li>
+                                
                             </ul>
                         </li>
                         <li class="scroll-to-section"><a href="#courses">Courses</a></li>
@@ -334,6 +354,40 @@ https://templatemo.com/tm-569-edu-meeting
   </div>
 </section>
 
+<section class="news-events">
+  <h2>News and Events</h2>
+  <div class="card-slider">
+      <div class="card">
+          <div class="card-inner">
+              <img src="assets/images/students/student11.JPG" alt="Event 1" class="card-image">
+              <div class="card-content">
+                  <h3>Event Title 1</h3>
+                  <p>Details about Event 1. This is an important news item or event happening soon.</p>
+              </div>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card-inner">
+              <img src="assets/images/students/student12.JPG" alt="Event 2" class="card-image">
+              <div class="card-content">
+                  <h3>Event Title 2</h3>
+                  <p>Details about Event 2. Another exciting event you should be aware of.</p>
+              </div>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card-inner">
+              <img src="assets/images/students/student3.JPG" alt="Event 3" class="card-image">
+              <div class="card-content">
+                  <h3>Event Title 3</h3>
+                  <p>Details about Event 3. Don’t miss this one!</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
 
 
 
@@ -512,6 +566,53 @@ https://templatemo.com/tm-569-edu-meeting
 });
     </script>
     <!-- Owl Carousel CSS and JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".news-swiper", {
+        slidesPerView: 1,   // Default: 1 slide per view
+        spaceBetween: 20,    // Space between slides
+        navigation: {
+          nextEl: ".swiper-button-next",  // Next button
+          prevEl: ".swiper-button-prev",  // Previous button
+        },
+        pagination: {
+          el: ".swiper-pagination",        // Pagination dots
+          clickable: true,                 // Clickable pagination
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,   // 2 slides per view for tablets
+          },
+          1024: {
+            slidesPerView: 3,   // 3 slides per view for desktops
+          },
+        },
+      });
+    </script>
+    <script>
+      // JavaScript to handle the automatic sliding
+      const slider = document.querySelector('.card-slider');
+      const cards = document.querySelectorAll('.card');
+      let currentIndex = 0;
+      const totalCards = cards.length;
+    
+      function slide() {
+        currentIndex = (currentIndex + 1) % totalCards; // Cycle through cards
+        slider.style.transform = `translateX(-${currentIndex * (cards[0].offsetWidth + 20)}px)`;
+      }
+    
+      // Set the slider to move every 3 seconds
+      setInterval(slide, 3000);
+    
+      // Ensure smooth scrolling when resized
+      window.addEventListener('resize', () => {
+        slider.style.transition = 'transform 0.3s ease-in-out';
+      });
+    </script>
+    
+    
+    
+    
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

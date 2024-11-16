@@ -352,13 +352,7 @@ header
 
 /* Base Header Style */
 /* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Header Section */
+/* Global Styles */
 /* Global Styles */
 * {
   margin: 0;
@@ -366,6 +360,7 @@ header
   box-sizing: border-box;
 }
 
+/* Header Section */
 .header-area {
   background-color: #fff;
   padding: 15px 20px;
@@ -408,15 +403,22 @@ header
   color: #1e1e1e;
   font-size: 16px;
   font-weight: 600;
-  transition: color 0.3s ease;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
 .nav li a:hover,
 .nav li a.active {
-  color: #007bff;
+  color: #fff;
+  background-color: #007bff;
 }
 
 /* Submenu Styling */
+.has-sub {
+  position: relative;
+}
+
 .has-sub .sub-menu {
   display: none;
   position: absolute;
@@ -426,7 +428,9 @@ header
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   list-style-type: none;
   padding: 10px 0;
-  min-width: 180px;
+  min-width: 200px;
+  z-index: 1000;
+  border-radius: 4px;
 }
 
 .has-sub:hover .sub-menu {
@@ -434,16 +438,22 @@ header
 }
 
 .sub-menu li {
-  padding: 8px 15px;
+  padding: 0;
 }
 
 .sub-menu li a {
   color: #1e1e1e;
   font-size: 14px;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 4px;
+  display: block;
+  transition: all 0.3s ease;
 }
 
 .sub-menu li a:hover {
-  color: #007bff;
+  color: #fff;
+  background-color: #007bff;
 }
 
 /* Mobile Menu Trigger */
@@ -473,6 +483,20 @@ header
 .menu-trigger span::after {
   content: "";
   top: 8px;
+}
+
+.menu-trigger.active span {
+  background-color: transparent;
+}
+
+.menu-trigger.active span::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.menu-trigger.active span::after {
+  transform: rotate(-45deg);
+  top: 0;
 }
 
 /* Responsive Styles */
@@ -535,6 +559,17 @@ header
   .menu-trigger.active span::after {
     transform: rotate(-45deg);
     top: 0;
+  }
+
+  /* Mobile Submenu */
+  .has-sub .sub-menu {
+    position: static;
+    box-shadow: none;
+    background-color: #f9f9f9;
+  }
+
+  .has-sub.active .sub-menu {
+    display: block;
   }
 }
 
@@ -1308,105 +1343,154 @@ courses
 /* General styling for the section */
 /* News & Events Section */
 /* News & Events Section */
+/* General styling */
+/* General styling */
+/* General styling */ /* General styling */
+/* General body styling */
+/* General body styling */
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  cursor: url("owl-cursor.png"), auto; /* Custom owl cursor */
+}
+
+/* News and Events Section */
 .news-events {
-  padding: 60px 0;
-  background-color: #f9f9f9;
-}
-
-.news-events .container {
-  width: 80%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.news-events h2.section-heading {
+  padding: 40px 20px;
+  background-color: #fff;
   text-align: center;
-  font-size: 36px;
-  font-weight: bold;
+}
+
+/* Heading */
+.news-events h2 {
+  font-size: 2rem;
   color: #333;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+}
+
+/* Card Slider */
+.card-slider {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  animation: slide 15s infinite; /* Automatic sliding */
+}
+
+/* Card styling */
+.card {
+  flex: 0 0 auto;
+  width: 280px;
+  height: 360px;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card-inner {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 100%;
   position: relative;
 }
 
-.news-events h2.section-heading .arrow {
-  font-size: 30px;
-  display: inline-block;
-  margin-left: 10px;
-  color: #333;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.news-carousel {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.news-events .event-item {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  width: 250px; /* Small boxes */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.news-events .event-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-
-.news-events .event-item img {
+.card-image {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  border-bottom: 2px solid #ddd;
+  border-radius: 15px 15px 0 0;
 }
 
-.news-events .event-item:hover img {
-  transform: scale(1.05);
-}
-
-.news-events .event-details {
+.card-content {
   padding: 15px;
 }
 
-.news-events .event-details h4 {
-  font-size: 18px;
-  font-weight: bold;
+.card-content h3 {
+  font-size: 1.3rem;
   color: #333;
   margin-bottom: 10px;
 }
 
-.news-events .event-details .date {
-  font-size: 12px;
-  color: #999;
-  margin-bottom: 10px;
+.card-content p {
+  font-size: 1rem;
+  color: #666;
 }
 
-.news-events .event-details p {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-.news-events .event-details .btn {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #1f72b8;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.news-events .event-details .btn:hover {
-  background-color: #165a8e;
+/* Hover Effect */
+.card:hover {
   transform: scale(1.05);
+  z-index: 10;
+}
+
+.card:hover .card-inner {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide animation */
+@keyframes slide {
+  0%,
+  33.33% {
+    transform: translateX(0);
+  }
+  66.66% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .card {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-slider {
+    gap: 15px;
+  }
+
+  .card {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-slider {
+    gap: 10px;
+  }
+
+  .card {
+    width: 100%;
+  }
 }
 
 /*
@@ -2344,5 +2428,318 @@ responsive
 
   .header-area .main-nav .nav li ul.sub-menu li a {
     color: #1f272b;
+  }
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Section styling */
+/* about college */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+/* About section styling */
+.about-college {
+  padding: 40px 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 1100px;
+}
+
+.about-college h2 {
+  font-size: 2.4rem;
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-college p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+/* Flex layout */
+.college-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.college-info img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.college-info img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.college-description {
+  max-width: 550px;
+  flex: 1;
+}
+
+.college-description h3 {
+  font-size: 1.8rem;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.college-description ul {
+  list-style: none;
+  padding: 0;
+}
+
+.college-description ul li {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.college-description ul li::before {
+  content: "•";
+  color: #0056b3;
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .college-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .college-info img {
+    width: 100%;
+    height: auto;
+  }
+
+  .college-description {
+    text-align: center;
+  }
+}
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+/* Section Styles */
+.affiliations {
+  padding: 40px 20px;
+  background-color: #fff;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+/* Affiliations Header and Description */
+.affiliations-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.affiliations-header p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Each Image Box */
+.affiliation-item img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.affiliation-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .affiliation-item img {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 576px) {
+  .affiliation-item img {
+    max-width: 100px;
+  }
+}
+/* General Styling for Student Life Gallery Section */
+.student-life-gallery {
+  padding: 50px 20px;
+  background-color: #fff;
+  margin: 40px auto;
+  border-radius: 10px;
+}
+
+/* Section Header */
+.student-life-gallery .section-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.student-life-gallery .section-header p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gallery-item img {
+    max-width: 100%;
+  }
+  .gallery-grid {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-item img {
+    max-width: 100%;
+  }
+  .gallery-grid {
+    gap: 5px;
+  }
+}
+/* General Styling for Classroom Gallery Section */
+.classroom-gallery {
+  padding: 50px 20px;
+  background-color: #fff;
+  margin: 40px auto;
+  border-radius: 10px;
+}
+
+/* Section Header */
+.classroom-gallery .section-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.classroom-gallery .section-header p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gallery-item img {
+    max-width: 100%;
+  }
+  .gallery-grid {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-item img {
+    max-width: 100%;
+  }
+  .gallery-grid {
+    gap: 5px;
   }
 }
