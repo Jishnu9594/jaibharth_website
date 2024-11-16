@@ -2743,3 +2743,418 @@ body {
     gap: 5px;
   }
 }
+/* General Styling for Job Fitment Section */
+.job-fitment {
+  background-image: url("https://jaibharathengg.com/assets/images/banner/Frame%20230.jpg"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.job-fitment .content {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background to make text readable */
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.job-fitment h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.job-fitment p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.contact-now-btn {
+  display: inline-block;
+  background-color: #f39c12; /* Button Color */
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-now-btn:hover {
+  background-color: #e67e22; /* Darker shade for hover effect */
+  transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .job-fitment h2 {
+    font-size: 2rem; /* Smaller heading for mobile */
+  }
+  .job-fitment p {
+    font-size: 1rem;
+  }
+  .contact-now-btn {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .job-fitment h2 {
+    font-size: 1.8rem; /* Smaller heading for very small screens */
+  }
+  .job-fitment p {
+    font-size: 0.9rem;
+  }
+  .contact-now-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+/* Container Styling */
+.job-fitment-analysis {
+  background: url("assets/images/job-fitment-bg.jpg") no-repeat center
+    center/cover;
+  color: #fff;
+  padding: 60px 20px;
+  position: relative;
+}
+
+/* Add Overlay Effect */
+.job-fitment-analysis::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 1;
+}
+
+/* Content Styling */
+.job-fitment-analysis .container {
+  position: relative;
+  z-index: 2;
+}
+
+.job-fitment-analysis h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+}
+
+.job-fitment-analysis p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.job-fitment-analysis a {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+/* Benefits Section */
+.benefits h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.benefits-list li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+  color: black;
+}
+
+.benefits-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffd700;
+  font-size: 1.5rem;
+}
+
+/* CTA Button */
+.cta .cta-button {
+  background-color: #ffd700;
+  color: #000;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cta .cta-button:hover {
+  background-color: #e6be00;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .job-fitment-analysis h2 {
+    font-size: 2rem;
+  }
+
+  .job-fitment-analysis p,
+  .benefits-list li {
+    font-size: 1rem;
+  }
+
+  .benefits-list {
+    padding: 0 15px;
+  }
+
+  .cta .cta-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+/*fitment dashboard*/
+
+/* General Styles */
+.job-fitment-dashboard {
+  background-color: #fff;
+  color: #333;
+  padding: 60px 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.job-fitment-dashboard .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Tabs Navigation */
+.tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.tab {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tab:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.tab.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #0056b3;
+}
+
+/* Tabs Content */
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tab-panel {
+  display: none;
+  transition: opacity 0.3s;
+}
+
+.tab-panel.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Tab Panel Content */
+.tab-panel-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tab-panel-content .text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.tab-panel-content .text h3 {
+  font-size: 1.8rem;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.tab-panel-content .text p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.tab-panel-content .image {
+  flex: 1;
+  max-width: 400px;
+  text-align: center;
+}
+
+.tab-panel-content .image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tab-panel-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tab-panel-content .text {
+    max-width: 100%;
+  }
+
+  .tab-panel-content .image {
+    max-width: 100%;
+  }
+}
+
+/* bannaner style carrer enhance
+
+/* Webinar Highlight Section */
+/* Webinar Highlight Alternate Style */
+.webinar-highlight-alt {
+  position: relative;
+  /* Gradient background */
+  color: #fff;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.webinar-highlight-alt .container {
+  max-width: 800px;
+  padding: 30px;
+  background: #ffffff; /* White background for content box */
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.webinar-highlight-alt .content-box h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0056b3;
+  margin-bottom: 20px;
+}
+
+.webinar-highlight-alt .content-box p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.btn-enroll-alt {
+  display: inline-block;
+  background: linear-gradient(90deg, #0056b3, #007bff);
+  color: #fff;
+  padding: 15px 40px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-enroll-alt:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .webinar-highlight-alt .content-box h2 {
+    font-size: 2rem;
+  }
+
+  .webinar-highlight-alt .content-box p {
+    font-size: 1rem;
+  }
+
+  .btn-enroll-alt {
+    font-size: 0.9rem;
+    padding: 12px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .webinar-highlight-alt .content-box h2 {
+    font-size: 1.8rem;
+  }
+
+  .webinar-highlight-alt .content-box p {
+    font-size: 0.9rem;
+  }
+
+  .btn-enroll-alt {
+    font-size: 0.8rem;
+    padding: 10px 25px;
+  }
+}
