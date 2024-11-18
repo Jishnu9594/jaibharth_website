@@ -580,7 +580,6 @@ banner
 */
 /* Main Banner */
 /* Main Banner */
-/* Main Banner */
 .main-banner {
   position: relative;
   height: 100vh;
@@ -609,15 +608,14 @@ banner
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   padding: 20px;
+  text-align: center;
 }
 
 /* Caption */
 .main-banner .caption {
   max-width: 750px;
   color: #ffffff;
-  animation: fadeIn 2s ease-in-out; /* Apply fade-in animation */
 }
 
 .main-banner .caption h6 {
@@ -627,7 +625,6 @@ banner
   letter-spacing: 2px;
   color: #ffcc33; /* Highlighted color */
   margin-bottom: 15px;
-  animation: fadeInUp 1.5s ease-in-out;
 }
 
 .main-banner .caption h2 {
@@ -637,7 +634,6 @@ banner
   color: #ffffff;
   margin: 15px 0;
   line-height: 1.4;
-  animation: fadeInUp 2s ease-in-out;
 }
 
 .main-banner .caption p {
@@ -645,7 +641,6 @@ banner
   color: #dcdcdc;
   line-height: 1.8;
   margin: 15px 0;
-  animation: fadeInUp 2.5s ease-in-out;
 }
 
 /* Button Styling */
@@ -660,32 +655,10 @@ banner
   border-radius: 30px;
   text-decoration: none;
   transition: background 0.3s ease;
-  animation: fadeInUp 3s ease-in-out;
 }
 
 .main-banner .main-button-red a:hover {
   background: #b71c1c; /* Darker red for hover */
-}
-
-/* Keyframes for Fade-In and Fade-In-Up */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* Media Queries */
