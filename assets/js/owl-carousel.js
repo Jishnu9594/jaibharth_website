@@ -3894,3 +3894,16 @@ setInterval(() => {
   const firstCard = slider.querySelector(".card");
   slider.appendChild(firstCard); // Move the first card to the end
 }, 5000); // Change slide every 5 seconds
+
+$(document).ready(function () {
+  $(".owl-news-events").owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: true,
+    responsive: {
+      0: { items: 1 },
+      600: { items: 2 },
+      1000: { items: 3 },
+    },
+  });
+});
