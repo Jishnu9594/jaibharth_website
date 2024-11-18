@@ -1256,6 +1256,7 @@ apply now
 
 /* Base Styles */
 /* Base Styles */
+
 #diploma-health-inspector {
   padding: 70px 0;
   background-color: #fff;
@@ -3145,5 +3146,528 @@ body {
   .btn-enroll-alt {
     font-size: 0.8rem;
     padding: 10px 25px;
+  }
+}
+
+/* courses
+
+/* General Styles */
+/* Global Styles */
+/* General Section Styles */
+/* General Section Styles */
+.diploma-section {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.section-heading {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Image Styling */
+.image-container {
+  margin-top: 40px;
+}
+
+.college-image {
+  width: 100%;
+  max-width: 700px; /* Reduced image width */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto; /* Center the image */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .section-heading {
+    font-size: 1.8rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .college-image {
+    max-width: 600px; /* Reduce image size further on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .section-description {
+    font-size: 0.9rem;
+  }
+
+  .college-image {
+    max-width: 100%; /* Ensure image takes up full width on very small screens */
+  }
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Section Styles */
+.course-details-section {
+  background-color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.course-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.course-info-text {
+  flex: 1 1 50%;
+  text-align: left;
+}
+
+.course-info-text h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.course-info-text ul {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.course-info-text li {
+  margin-bottom: 10px;
+}
+
+.course-image {
+  flex: 1 1 40%;
+}
+
+.image-responsive {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .course-info-text h3 {
+    font-size: 1.8rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .course-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .course-info-text {
+    flex: 1 1 100%;
+  }
+
+  .course-image {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .course-info-text h3 {
+    font-size: 1.6rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .course-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .course-info-text {
+    flex: 1 1 100%;
+  }
+
+  .course-image {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .course-info-text h3 {
+    font-size: 1.4rem;
+  }
+
+  .section-description {
+    font-size: 0.9rem;
+  }
+
+  .course-info-text li {
+    font-size: 0.9rem;
+  }
+}
+/* General Section Styles */
+.career-benefits-section {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Heading */
+.section-subheading {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Career Opportunities and Benefits Lists */
+.career-list,
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.1rem;
+  color: #555;
+  text-align: left;
+}
+
+.career-list li,
+.benefits-list li {
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+
+/* Responsive Layout for Career and Benefits */
+.career-opportunities,
+.program-benefits {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.career-opportunities {
+  margin-right: 20px;
+}
+
+.program-benefits {
+  margin-left: 20px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .section-subheading {
+    font-size: 1.8rem;
+  }
+
+  .career-list,
+  .benefits-list {
+    font-size: 1rem;
+  }
+
+  .career-opportunities,
+  .program-benefits {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-subheading {
+    font-size: 1.6rem;
+  }
+
+  .career-list,
+  .benefits-list {
+    font-size: 0.9rem;
+  }
+
+  /* Stack the columns for smaller screens */
+  .career-opportunities,
+  .program-benefits {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+/* General Section Styles */
+/* General Section Styles */
+.join-us-section {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Section Description */
+.section-description {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Call to Action Button */
+.btn-join {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-join:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .btn-join {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-description {
+    font-size: 0.9rem;
+  }
+
+  .btn-join {
+    font-size: 0.9rem;
+    padding: 8px 18px;
+  }
+}
+/* our recurtres */
+/* General Section Styles */
+
+/* General Section Styles */
+/* General Section Styles */
+.recruiters-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Title and Description */
+.section-title {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.section-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Slider Styles */
+.recruiters-slider {
+  display: flex;
+  overflow: hidden; /* Hide overflowing logos */
+  white-space: nowrap; /* Prevent wrapping of items */
+  animation: slide 20s linear infinite; /* Infinite sliding animation */
+}
+
+.recruiter-item {
+  flex-shrink: 0;
+  width: 150px; /* Adjust logo size */
+  margin: 0 10px; /* Spacing between logos */
+}
+
+.recruiter-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.recruiter-item:hover img {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Keyframes for sliding animation */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 0.9rem;
+  }
+
+  .recruiter-item {
+    width: 100px; /* Smaller logos on small screens */
   }
 }
