@@ -3342,6 +3342,10 @@ body {
 }
 
 /* Global Styles */
+/* General Reset */
+/* Global Styles */
+/* Global Styles */
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -3366,13 +3370,13 @@ body {
 .course-details-section {
   background-color: #fff;
   padding: 60px 0;
-  text-align: center;
 }
 
 .section-title {
   font-size: 2.8rem;
   color: black;
   margin-bottom: 20px;
+  text-align: center; /* Centered heading */
 }
 
 .section-description {
@@ -3381,21 +3385,20 @@ body {
   margin-bottom: 30px;
   line-height: 1.6;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: left; /* Left-aligned description */
 }
 
 .course-info {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 30px;
 }
 
 .course-info-text {
   flex: 1 1 50%;
-  text-align: left;
+  text-align: left; /* Left-aligned course info */
 }
 
 .course-info-text h3 {
@@ -3426,78 +3429,92 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Media Queries for responsiveness */
+/* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
-  .section-title {
-    font-size: 2.5rem;
-  }
-
-  .course-info-text h3 {
-    font-size: 1.8rem;
-  }
-
-  .section-description {
-    font-size: 1rem;
-  }
-
   .course-info {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start; /* Ensure items are aligned to the left */
   }
 
   .course-info-text {
     flex: 1 1 100%;
+    padding: 20px;
   }
 
   .course-image {
     flex: 1 1 100%;
+    margin-top: 20px;
+  }
+
+  .section-title {
+    font-size: 2.5rem; /* Slightly smaller heading for tablets */
+    text-align: center; /* Still centered */
+  }
+
+  .section-description {
+    font-size: 1rem;
+    text-align: left; /* Left-aligned description */
   }
 }
 
 @media (max-width: 768px) {
-  .section-title {
-    font-size: 2.2rem;
-  }
-
   .course-info-text h3 {
     font-size: 1.6rem;
   }
 
-  .section-description {
-    font-size: 1rem;
+  .section-title {
+    font-size: 2rem; /* Adjusted heading size for smaller screens */
+    text-align: center; /* Still centered */
   }
 
-  .course-info {
-    flex-direction: column;
-    text-align: center;
+  .section-description {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .course-info-text ul {
+    font-size: 0.95rem;
+    text-align: left;
   }
 
   .course-info-text {
-    flex: 1 1 100%;
+    padding: 10px;
   }
 
-  .course-image {
-    flex: 1 1 100%;
+  .course-image img {
+    max-width: 350px;
   }
 }
 
 @media (max-width: 480px) {
-  .section-title {
-    font-size: 1.8rem;
-  }
-
   .course-info-text h3 {
     font-size: 1.4rem;
   }
 
-  .section-description {
-    font-size: 0.9rem;
+  .section-title {
+    font-size: 1.8rem; /* Smaller heading for mobile */
+    text-align: center; /* Still centered */
   }
 
-  .course-info-text li {
+  .section-description {
     font-size: 0.9rem;
+    text-align: left;
+  }
+
+  .course-info-text ul {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  .course-info-text {
+    padding: 10px;
+  }
+
+  .course-image img {
+    max-width: 300px;
   }
 }
+
 /* General Section Styles */
 .career-benefits-section {
   background-color: #fff;
