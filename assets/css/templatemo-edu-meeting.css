@@ -3751,3 +3751,287 @@ body {
     width: 100px; /* Smaller logos on small screens */
   }
 }
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+/* Facilities Section Styling */
+
+/* Facilities Section */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+}
+
+/* Facilities Section */
+.facilities-section {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.facilities-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: #007bff;
+  display: block;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+/* Tabs Navigation */
+.tabs-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.tab-item {
+  font-size: 16px;
+  padding: 10px 20px;
+  color: #007bff;
+  background: #fff;
+  border: 2px solid #007bff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-item:hover,
+.tab-item.active {
+  background: #007bff;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Tabs Content */
+.tabs-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.content-wrapper img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-content {
+  max-width: 600px;
+  text-align: left;
+}
+
+.text-content h3 {
+  font-size: 24px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.text-content p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tab-item {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .text-content h3 {
+    font-size: 20px;
+  }
+
+  .text-content p {
+    font-size: 14px;
+  }
+}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+}
+
+/* Highlights Section */
+.highlights-section {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.highlights-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: #007bff;
+  display: block;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+/* Highlights Grid */
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Highlight Card */
+.highlight-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-card .icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007bff;
+  border-radius: 50%;
+}
+
+.highlight-card .icon img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+.highlight-title {
+  font-size: 20px;
+  color: #222;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.highlight-description {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+  }
+
+  .highlight-card {
+    padding: 15px;
+  }
+
+  .highlight-title {
+    font-size: 18px;
+  }
+
+  .highlight-description {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .highlight-card {
+    padding: 10px;
+  }
+
+  .highlight-title {
+    font-size: 16px;
+  }
+
+  .highlight-description {
+    font-size: 12px;
+  }
+}
