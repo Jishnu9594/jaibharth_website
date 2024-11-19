@@ -580,12 +580,14 @@ banner
 */
 /* Main Banner */
 /* Main Banner */
+/* Main Banner */
 .main-banner {
   position: relative;
   height: 100vh;
   overflow: hidden;
 }
 
+/* Background Video */
 #bg-video {
   width: 100%;
   height: 100%;
@@ -613,13 +615,15 @@ banner
 }
 
 /* Caption */
-.main-banner .caption {
-  max-width: 750px;
+.caption {
+  max-width: 800px;
   color: #ffffff;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8); /* Modern text shadow for clarity */
+  padding: 0 20px;
 }
 
-.main-banner .caption h6 {
-  font-size: 18px;
+.caption h6 {
+  font-size: 1.2rem; /* Responsive font size */
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -627,104 +631,112 @@ banner
   margin-bottom: 15px;
 }
 
-.main-banner .caption h2 {
-  font-size: 48px;
+.caption h2 {
+  font-size: 2.5rem; /* Scales with screen size */
   font-weight: 700;
   text-transform: uppercase;
+  line-height: 1.4;
   color: #ffffff;
   margin: 15px 0;
-  line-height: 1.4;
 }
 
-.main-banner .caption p {
-  font-size: 16px;
-  color: #dcdcdc;
-  line-height: 1.8;
-  margin: 15px 0;
+.caption h4 {
+  font-size: 1.5rem; /* Responsive subheading */
+  font-weight: 400;
+  margin: 10px 0;
+  color: #eeeeee;
 }
 
-/* Button Styling */
-.main-banner .main-button-red a {
+.caption h5 {
+  font-size: 1.1rem; /* Subheading for small text */
+  margin: 10px 0;
+  color: #dddddd;
+}
+
+.main-button-red a {
   display: inline-block;
   padding: 12px 40px;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
   color: #ffffff;
   background: #e63946; /* Deep red */
   border-radius: 30px;
   text-decoration: none;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.main-banner .main-button-red a:hover {
+.main-button-red a:hover {
   background: #b71c1c; /* Darker red for hover */
+  transform: scale(1.05); /* Modern hover effect */
 }
 
-/* Media Queries */
-@media screen and (max-width: 1024px) {
-  .main-banner .caption h2 {
-    font-size: 42px;
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+  .caption h2 {
+    font-size: 2rem;
   }
 
-  .main-banner .caption h6 {
-    font-size: 16px;
+  .caption h6 {
+    font-size: 1rem;
   }
 
-  .main-banner .caption p {
-    font-size: 15px;
+  .caption h4,
+  .caption h5 {
+    font-size: 1.2rem;
   }
 
-  .main-banner .main-button-red a {
+  .main-button-red a {
     padding: 10px 30px;
-    font-size: 14px;
+    font-size: 0.9rem;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .main-banner {
     height: 90vh;
   }
 
-  .main-banner .caption h2 {
-    font-size: 36px;
+  .caption h2 {
+    font-size: 1.8rem;
   }
 
-  .main-banner .caption h6 {
-    font-size: 14px;
+  .caption h6 {
+    font-size: 0.9rem;
   }
 
-  .main-banner .caption p {
-    font-size: 14px;
+  .caption h4,
+  .caption h5 {
+    font-size: 1rem;
   }
 
-  .main-banner .main-button-red a {
+  .main-button-red a {
     padding: 8px 25px;
-    font-size: 14px;
+    font-size: 0.8rem;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
   .main-banner {
     height: 80vh;
   }
 
-  .main-banner .caption h2 {
-    font-size: 28px;
-    line-height: 1.2;
+  .caption h2 {
+    font-size: 1.5rem;
   }
 
-  .main-banner .caption h6 {
-    font-size: 13px;
+  .caption h6 {
+    font-size: 0.8rem;
   }
 
-  .main-banner .caption p {
-    font-size: 12px;
+  .caption h4,
+  .caption h5 {
+    font-size: 0.9rem;
   }
 
-  .main-banner .main-button-red a {
+  .main-button-red a {
     padding: 6px 20px;
-    font-size: 12px;
+    font-size: 0.7rem;
   }
 }
 
