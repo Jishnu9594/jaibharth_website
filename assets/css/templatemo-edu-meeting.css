@@ -333,6 +333,7 @@ header
 .sub-header .right-icons ul li {
   display: inline-block;
   margin-left: 15px;
+  color: #fff;
 }
 
 .sub-header .right-icons ul li a {
