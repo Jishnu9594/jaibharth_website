@@ -28,6 +28,8 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     rel="stylesheet"
   />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
 
 <!--
 
@@ -468,6 +470,66 @@ https://templatemo.com/tm-569-edu-meeting
   </div>
 </section>
 
+<section class="gallery_area">
+  <div class="container">
+    <div class="heading_sec3">
+      <h2>OUR <span class="down-mark-line-4">GALLERY</span></h2>
+    </div>
+    <div class="gallery_slider">
+      <div class="gallery_images">
+        <div class="gallery_item">
+          <img src="assets/images/gallery/Audience.jpg" alt="Image 1">
+        </div>
+        <div class="gallery_item">
+          <a href="events-gallery.php">
+            <img src="assets/images/gallery/g10.jpeg" alt="Image 2">
+          </a>
+        </div>
+        <div class="gallery_item">
+          <a href="events-gallery.php">
+            <img src="assets/images/gallery/g11.jpeg" alt="Image 3">
+          </a>
+        </div>
+        <div class="gallery_item">
+          <a href="events-gallery.php">
+            <img src="assets/images/gallery/g12.jpeg" alt="Image 4">
+          </a>
+        </div>
+        <div class="gallery_item">
+          <a href="events-gallery.php">
+            <img src="assets/images/gallery/g13.jpeg" alt="Image 5">
+          </a>
+        </div>
+        <div class="gallery_item">
+          <a href="events-gallery.php">
+            <img src="assets/images/gallery/g14.jpeg" alt="Image 6">
+          </a>
+        </div>
+        <div class="gallery_item">
+          <a href="events-gallery.php">
+            <img src="assets/images/gallery/g15.jpeg" alt="Image 7">
+          </a>
+        </div>
+        <div class="gallery_item">
+          <a href="events-gallery.php">
+            <img src="assets/images/gallery/g8.jpeg" alt="Image 8">
+          </a>
+        </div>
+        <div class="gallery_item">
+          <a href="events-gallery.php">
+            <img src="assets/images/gallery/gallery1.jpeg" alt="Image 9">
+          </a>
+        </div>
+      </div>
+      <!-- Slider Controls -->
+      <div class="slider_controls">
+        <button class="prev_slide">&#10094;</button>
+        <button class="next_slide">&#10095;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="contact-us" id="contact">
   <div class="container">
     <div class="contact-wrapper">
@@ -619,28 +681,43 @@ https://templatemo.com/tm-569-edu-meeting
     </script>
     <script>
       // JavaScript to handle the automatic sliding
-      const slider = document.querySelector('.card-slider');
-      const cards = document.querySelectorAll('.card');
-      let currentIndex = 0;
-      const totalCards = cards.length;
-    
-      function slide() {
-        currentIndex = (currentIndex + 1) % totalCards; // Cycle through cards
-        slider.style.transform = `translateX(-${currentIndex * (cards[0].offsetWidth + 20)}px)`;
-      }
-    
-      // Set the slider to move every 3 seconds
-      setInterval(slide, 3000);
-    
-      // Ensure smooth scrolling when resized
-      window.addEventListener('resize', () => {
-        slider.style.transition = 'transform 0.3s ease-in-out';
-      });
+     
+      const prevButton = document.querySelector('.prev_slide');
+  const nextButton = document.querySelector('.next_slide');
+  const galleryImages = document.querySelector('.gallery_images');
+  let index = 0;
+  const totalItems = galleryImages.children.length;
+
+  // Update the gallery's visible image
+  const updateGallery = () => {
+    galleryImages.style.transform = `translateX(-${index * 100}%)`;
+  };
+
+  // Navigate to the previous image
+  const goPrev = () => {
+    index = (index === 0) ? totalItems - 1 : index - 1;
+    updateGallery();
+  };
+
+  // Navigate to the next image
+  const goNext = () => {
+    index = (index === totalItems - 1) ? 0 : index + 1;
+    updateGallery();
+  };
+
+  // Event listeners for manual controls
+  prevButton.addEventListener('click', goPrev);
+  nextButton.addEventListener('click', goNext);
+
+  // Auto-slide functionality (every 3 seconds)
+  setInterval(goNext, 3000);
+
     </script>
     
     
     
-    
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
