@@ -132,17 +132,17 @@ https://templatemo.com/tm-569-edu-meeting
       <p class="section-description">
         Join our 2-year Professional Diploma in Health Inspector course, approved by the Government of Kerala, and prepare for a rewarding career in health and allied sectors. This comprehensive program is designed to develop skilled health professionals who are ready to make a difference in public health and safety.
       </p>
-      <a href="tel:+919744656669" class="btn">Call Now</a>
+      <a href="tel:+919446688366" class="btn">Call Now</a>
     </div>
     
 </section>
 
-<section class="course-details-section">
+<<section class="course-details-section-alt">
   <div class="container">
     <div class="course-header">
       <h2 class="section-title">Course Details</h2>
       <p class="section-description">
-        The Professional Diploma in Health Inspector is a specialized, two-year program designed to train students in essential public health skills, particularly focusing on health inspection and sanitary practices. This course aims to equip students with the skills and knowledge to play a critical role in public health, from ensuring sanitary standards to preventing disease outbreaks. This course is ideal for those committed to enhancing community health and safety, with ample employment and growth opportunities both locally and globally.
+        The Professional Diploma in Health Inspector is a specialized, two-year program designed to train students in essential public health skills, focusing on health inspection and sanitary practices. This course equips students with the skills to enhance community health and safety, offering employment and growth opportunities locally and globally.
       </p>
     </div>
 
@@ -156,13 +156,54 @@ https://templatemo.com/tm-569-edu-meeting
           <li><strong>Certification:</strong> Recognized by the Paramedical Council, Government of Kerala</li>
         </ul>
       </div>
-
       <div class="course-image">
         <img src="assets/images/helath inspector.jpg" alt="Health Inspector Course" class="image-responsive">
       </div>
     </div>
+
+    <div class="curriculum">
+      <h3>Curriculum Overview</h3>
+      <div class="accordion">
+        <!-- First Year -->
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <h4>First Year</h4>
+            <span class="accordion-icon">+</span>
+          </div>
+          <div class="accordion-content">
+            <p>
+              <strong>Paper I:</strong> Nutrition, Hygiene, Basic Pharmacology, Basic Microbiology<br>
+              <strong>Paper II:</strong> First Aid, Basic Medicine, Disaster Management, Disability<br>
+              <strong>Paper III:</strong> Communicable Diseases, National Health Program<br>
+              <strong>Paper IV:</strong> Public Health & Primary Health Care, Family Welfare, Job Responsibilities, Health Statistics, Population Education<br>
+              <strong>Field Visit:</strong> 45 days
+            </p>
+          </div>
+        </div>
+
+        <!-- Second Year -->
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <h4>Second Year</h4>
+            <span class="accordion-icon">+</span>
+          </div>
+          <div class="accordion-content">
+            <p>
+              <strong>Paper I:</strong> Environmental Sanitation & Public Health Problems<br>
+              <strong>Paper II:</strong> Communication & Health Education<br>
+              <strong>Paper III:</strong> Management Fundamentals, Public Health Act, Project Preparation<br>
+              <strong>Paper IV:</strong> Behavioral Science, Sociology, Psychology, Mental Health<br>
+              <strong>Paper V:</strong> Non-Communicable Diseases, Bio-medical Waste Management, Palliative & Geriatric Health<br>
+              <strong>Field Visit:</strong> 45 days
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+
 
 
   <section class="career-benefits-section">
@@ -175,6 +216,12 @@ https://templatemo.com/tm-569-edu-meeting
           <li>• Sanitation and Waste Management Organizations</li>
           <li>• Food Safety and Inspection Agencies</li>
           <li>• International Health Organizations and NGOs focused on Public Health</li>
+          <li>• Health Educator: Kerala Government's Health Department and NGOs employ Health Educators.</li>
+          <li>• Environmental Health Specialist: Private companies and NGOs hire for this role..</li>
+          <li>• Sanitary Inspector: Kerala Government's Local Self Government Department employs Sanitary Inspectors.</li>
+          <li>• Public Health Nurse: Kerala Government's Health Department recruits for this role.</li>
+          <li>• Health Inspector: Kerala Municipal Corporation, Kerala Water Authority, and other local bodies employ Health Inspectors.</li>
+          <li>•  Junior Public Health Inspector: Kerala Public Service Commission (KPSC) recruits for this role.</li>
         </ul>
       </div>
   
@@ -185,6 +232,11 @@ https://templatemo.com/tm-569-edu-meeting
           <li>• High employability in both public and private health sectors.</li>
           <li>• Pathways for career advancement in health administration and public health management.</li>
           <li>• Opportunities for international positions with health organizations, NGOs, and more.</li>
+          <li>• Food Safety Inspector: Private companies and NGOs employ Food Safety Inspectors.</li>
+          <li>• Quality Control Inspector: Private companies hire for this role.</li>
+          <li>• International health organizations and NGOs focused on public health</li>
+         
+          
         </ul>
       </div>
     </div>
@@ -327,6 +379,20 @@ https://templatemo.com/tm-569-edu-meeting
         $(window).scroll(function () {
           checkSection();
         });
+        function toggleAccordion(element) {
+  const content = element.nextElementSibling;
+  const icon = element.querySelector('.accordion-icon');
+
+  // Toggle visibility
+  if (content.classList.contains('active')) {
+    content.classList.remove('active');
+    icon.textContent = '+';
+  } else {
+    content.classList.add('active');
+    icon.textContent = '−';
+  }
+}
+
     </script>
 </body>
 
