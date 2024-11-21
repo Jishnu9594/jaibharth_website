@@ -183,6 +183,40 @@ https://templatemo.com/tm-569-edu-meeting
     </div>
 </section>
 
+<section class="classroom-gallery">
+  <div class="container">
+      <!-- Section Title -->
+      <div class="section-header text-center">
+          <h2>Events at Jaibharath</h2>
+          <p>Discover engaging events at Jai Bharath Institute, where education blends theory with hands-on experience, fostering growth and innovation.</p>
+      </div>
+
+      <!-- Gallery Images -->
+      <div class="row gallery-grid">
+          <div class="col-sm-4 col-6 gallery-item">
+              <img src="assets/images/events/eventimg1.jpeg" alt="Classroom Activity 1">
+          </div>
+          <div class="col-sm-4 col-6 gallery-item">
+              <img src="assets/images/events/eventimg2.jpeg" alt="Classroom Activity 2">
+          </div>
+          <div class="col-sm-4 col-6 gallery-item">
+              <img src="assets/images/events/eventimg3.jpeg" alt="Classroom Activity 3">
+          </div>
+          <div class="col-sm-4 col-6 gallery-item">
+              <img src="assets/images/events/eventimg4.jpeg" alt="Classroom Activity 4">
+          </div>
+          <div class="col-sm-4 col-6 gallery-item">
+              <img src="assets/images/events/eventimg5.jpeg" alt="Classroom Activity 5">
+          </div>
+          <div class="col-sm-4 col-6 gallery-item">
+              <img src="assets/images/events/eventimg6.jpeg" alt="Classroom Activity 6">
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
 
 <section class="contact-us" id="contact">
   <div class="container">
@@ -306,6 +340,26 @@ https://templatemo.com/tm-569-edu-meeting
         $(window).scroll(function () {
           checkSection();
         });
+    </script>
+    <script>
+      function toggleSound(videoId) {
+        var video = document.getElementById(videoId);
+        if (video.muted) {
+          video.muted = false;
+        } else {
+          video.muted = true;
+        }
+      }
+    
+      // Optional: Play video on hover (if you want video to start when hovered over)
+      document.querySelectorAll('.gallery-item video').forEach(function (video) {
+        video.addEventListener('mouseenter', function() {
+          video.play();
+        });
+        video.addEventListener('mouseleave', function() {
+          video.pause();
+        });
+      });
     </script>
 </body>
 
