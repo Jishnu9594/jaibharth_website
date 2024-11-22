@@ -878,12 +878,14 @@ upcoming meetings
 /* Base styling for mobile-first design */
 /* Global Styles for About Us Section */
 /* About Us Section Styling */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
   font-family: "Helvetica", sans-serif;
   line-height: 1.6;
@@ -891,6 +893,7 @@ body {
   background-color: #fff;
 }
 
+/* Header Styles */
 h2,
 h4 {
   font-weight: 700;
@@ -918,6 +921,7 @@ img {
   margin: 0 auto;
 }
 
+/* Section Heading Styles */
 .section-heading {
   text-align: center;
   margin-bottom: 3rem;
@@ -942,6 +946,9 @@ img {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ensures text is centered in card */
 }
 
 .about-card:hover {
@@ -949,7 +956,7 @@ img {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Card Styles */
+/* Mission and Vision Cards Styles */
 .mission-card,
 .vision-card {
   background-color: #fff;
@@ -993,30 +1000,13 @@ h4 {
   font-size: 1.5rem;
   color: #333;
   margin-bottom: 10px;
+  text-align: center; /* Center align text for better look */
 }
 
 p {
   font-size: 1rem;
   color: #555;
   text-align: center;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .mission-card,
-  .vision-card {
-    padding: 15px;
-  }
-
-  .icon {
-    font-size: 30px;
-  }
-}
-
-.mission-card:hover,
-.vision-card:hover {
-  background-color: #fff;
-  transform: translateY(-8px);
 }
 
 /* Image Hover Effects */
@@ -1047,26 +1037,55 @@ p {
 }
 
 /* Responsive Design */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+  /* Section Heading on Small Screens */
+  .section-heading h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-heading p {
+    font-size: 1rem;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Adjust Cards in Mobile View */
+  .about-card,
+  .mission-card,
+  .vision-card {
+    padding: 1.5rem; /* Reduce padding for mobile view */
+    margin-bottom: 2rem; /* Space between cards */
+  }
+
+  .icon {
+    font-size: 30px;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  /* Flex Layout Adjustments */
   .row {
     display: flex;
+    flex-direction: column; /* Stack the columns vertically on mobile */
+    align-items: center; /* Center align cards in mobile view */
     gap: 1.5rem;
-    justify-content: space-between; /* Added space between items */
   }
 
   .col-lg-6,
   .col-lg-4 {
-    flex: 1;
-    display: flex; /* Ensure flex items are aligned properly */
-    justify-content: center;
+    flex: 1 0 100%; /* Take full width on mobile */
   }
 
-  .col-lg-6 {
-    flex: 0 0 calc(50% - 1rem);
-  }
-
-  .col-lg-4 {
-    flex: 0 0 calc(33.333% - 1rem);
+  /* Image Container Adjustments */
+  .college-photo {
+    height: 200px; /* Ensure image containers have a defined height on mobile */
   }
 }
 
