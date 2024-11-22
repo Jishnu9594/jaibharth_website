@@ -790,6 +790,7 @@ services
   margin-bottom: 10px;
   font-size: 20px;
   font-weight: 700;
+  color: #fff;
 }
 
 .services .item p {
@@ -877,194 +878,195 @@ upcoming meetings
 /* Base styling for mobile-first design */
 /* Global Styles for About Us Section */
 /* About Us Section Styling */
-.about-us {
-  padding: 80px 0;
-  background-color: #fff;
-  font-family: Arial, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Section Heading */
-.about-us .section-heading {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.about-us .section-heading h2 {
-  font-size: 40px;
+body {
+  font-family: "Helvetica", sans-serif;
+  line-height: 1.6;
   color: #333;
-  font-weight: bold;
-  margin-bottom: 15px;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 10px;
-  border-bottom: 3px solid #4a90e2;
-}
-
-.about-us .section-heading h2 .arrow {
-  font-size: 24px;
-  color: #4a90e2;
-}
-
-.about-us .section-heading p.section-description {
-  font-size: 18px;
-  color: #444;
-  max-width: 750px;
-  margin: 0 auto;
-  line-height: 1.8;
-}
-
-/* About Card Styling */
-.about-us .about-card {
   background-color: #fff;
-  padding: 35px;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.about-us .about-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+h2,
+h4 {
+  font-weight: 700;
+  color: #fff;
 }
 
-.about-us .about-card h3 {
-  font-size: 30px;
-  color: #4a90e2;
-  font-weight: bold;
-  margin-bottom: 20px;
+p {
+  margin-bottom: 1.5rem;
+  color: #666;
 }
 
-.about-us .about-card p {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.8;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-/* Mission and Vision Cards */
+/* Section Styles */
+.about-us {
+  padding: 4rem 1rem;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-heading h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.section-heading p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Card Styles */
+.about-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Styles */
 .mission-card,
 .vision-card {
   background-color: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease;
 }
 
 .mission-card:hover,
 .vision-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.mission-card h4,
-.vision-card h4 {
-  font-size: 24px;
-  color: #4a90e2;
-  font-weight: bold;
-  margin-bottom: 15px;
+/* Icon Styles */
+.icon {
+  font-size: 36px;
+  color: #4caf50; /* Green for mission */
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
 }
 
-.mission-card p,
-.vision-card p {
-  font-size: 16px;
-  color: #666;
-  line-height: 1.8;
+.mission-card .icon {
+  color: #4caf50; /* Green for mission */
 }
 
-/* College Photos Styling */
+.vision-card .icon {
+  color: #007bff; /* Blue for vision */
+}
+
+.icon:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Text Styles */
+h4 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mission-card,
+  .vision-card {
+    padding: 15px;
+  }
+
+  .icon {
+    font-size: 30px;
+  }
+}
+
+.mission-card:hover,
+.vision-card:hover {
+  background-color: #fff;
+  transform: translateY(-8px);
+}
+
+/* Image Hover Effects */
+/* Image Container Styles */
+.college-photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional for subtle shadow effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Image Styles */
 .college-photo img {
   width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, opacity 0.4s ease; /* Added opacity transition */
+  object-fit: cover; /* Ensures the image covers the entire container */
 }
 
-.college-photo img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+.college-photo:hover img {
+  transform: scale(1.1);
+  opacity: 0.8; /* Optional: slight fade effect on hover */
 }
 
-/* Grid Layout and Alignment */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-}
+/* Responsive Design */
+@media (min-width: 768px) {
+  .row {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between; /* Added space between items */
+  }
 
-.col-lg-12,
-.col-lg-6,
-.col-lg-4,
-.col-md-6 {
-  flex: 1;
-  min-width: 280px;
-}
+  .col-lg-6,
+  .col-lg-4 {
+    flex: 1;
+    display: flex; /* Ensure flex items are aligned properly */
+    justify-content: center;
+  }
 
-/* Global Media Queries */
+  .col-lg-6 {
+    flex: 0 0 calc(50% - 1rem);
+  }
 
-/* Medium Devices (Tablets) */
-@media (max-width: 992px) {
-  .about-us .section-heading h2 {
-    font-size: 32px;
-  }
-  .about-us .section-heading p.section-description {
-    font-size: 16px;
-  }
-  .about-us .about-card h3,
-  .mission-card h4,
-  .vision-card h4 {
-    font-size: 26px;
-  }
-  .about-us .about-card p,
-  .mission-card p,
-  .vision-card p {
-    font-size: 15px;
-  }
-}
-
-/* Small Devices (Phones) */
-@media (max-width: 768px) {
-  .about-us .section-heading h2 {
-    font-size: 28px;
-  }
-  .about-us .section-heading p.section-description {
-    font-size: 15px;
-  }
-  .about-us .about-card h3,
-  .mission-card h4,
-  .vision-card h4 {
-    font-size: 22px;
-  }
-  .about-us .about-card p,
-  .mission-card p,
-  .vision-card p {
-    font-size: 14px;
-  }
-}
-
-/* Extra Small Devices (Very Small Phones) */
-@media (max-width: 576px) {
-  .about-us {
-    padding: 50px 15px;
-  }
-  .about-us .section-heading h2 {
-    font-size: 24px;
-  }
-  .about-us .section-heading p.section-description {
-    font-size: 14px;
-  }
-  .about-us .about-card h3,
-  .mission-card h4,
-  .vision-card h4 {
-    font-size: 20px;
-  }
-  .about-us .about-card p,
-  .mission-card p,
-  .vision-card p {
-    font-size: 13px;
+  .col-lg-4 {
+    flex: 0 0 calc(33.333% - 1rem);
   }
 }
 
